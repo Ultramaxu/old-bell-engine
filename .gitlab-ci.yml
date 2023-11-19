@@ -1,0 +1,12 @@
+default:
+  image: rust:1.73-alpine
+
+stages:
+  - test
+
+core-test:
+  stage: test
+  before_script:
+    - apk add build-base
+  script:
+    - cargo test
